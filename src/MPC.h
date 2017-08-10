@@ -20,8 +20,8 @@ const double dt = 0.1; // this matches the latency time, which simplifies the mo
 // Actuator parameters
 const double throttle_to_acc = 1.8;      // Convert throttle to acceleration, based on experimentations
 const double delta_to_steering = 0.85;  // Convert delta angle to steering, based on experimentations
-const double ref_v_max = 120, ref_v_min = 65;               // Target speed
-const double max_y_fast = 7, min_y_slow = 14;
+const double ref_v_max = 120, ref_v_min = 65;   // Target speed, varies based on proximity to curves
+const double max_y_fast = 7, min_y_slow = 14;   // Parameters to evaluate whether we're close to a curve and how sharp it is
 
 // Length from front to CoG that has a similar radius.
 // It was obtained by measuring the radius formed by running the vehicle in the

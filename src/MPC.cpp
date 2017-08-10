@@ -62,6 +62,7 @@ class FG_eval {
   typedef CPPAD_TESTVECTOR(AD<double>) ADvector;
   void operator()(ADvector& fg, const ADvector& vars) {
 
+    // Modify the reference speed linearly based on proximity to turns
     double ref_v = ref_v_max;
     double y_at_50 = abs(polyeval2(coeffs, 50));    
     if (y_at_50 > max_y_fast)
